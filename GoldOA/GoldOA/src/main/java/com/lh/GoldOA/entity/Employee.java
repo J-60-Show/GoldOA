@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class Employee {
 
-    
-	private Integer id;//编号
-	private String name;//姓名
-	private String phone;//电话号码
-	private String age;//年龄
-	private String address;//住址
-	private String folkName;//家人姓名
-	private String folkPhone;//家人电话
-	private Date getDay;//到岗时间
+      
+	private Integer id;//缂栧彿
+	private String name;//濮撳悕
+	private String phone;//鐢佃瘽
+	private String age;//骞撮緞
+	private String address;//浣忓潃
+	private String folkName;//浜插睘濮撳悕
+	private String folkPhone;//浜插睘鐢佃瘽
+	private Date getDay;//鍒板矖鏃ユ湡
 	
 	public Integer getId() {
 		return id;
