@@ -1,7 +1,11 @@
 package com.lh.GoldOA.entity;
 
 import java.util.Date;
-
+/**
+ * 员工表--持久化类
+ * @author NashobaBrook
+ * @date 2017年8月18日15:42:47
+ */
 public class Employee {
 
       
