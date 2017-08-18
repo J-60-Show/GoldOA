@@ -2,13 +2,8 @@ package com.lh.GoldOA.entity;
 
 import java.util.Date;
 
-/**
- * 员工表--持久化类
- * @author NashobaBrook
- * @data 2017年8月18日15:25:31
- *
- */
 public class Employee {
+
     
 	private Integer id;//编号
 	private String name;//姓名
@@ -70,8 +65,6 @@ public class Employee {
 	public Employee() {
 		super();
 	}
-	
-	
 	
 	
 }
