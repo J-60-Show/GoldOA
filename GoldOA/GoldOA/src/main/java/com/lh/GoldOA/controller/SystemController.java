@@ -1,8 +1,11 @@
 package com.lh.GoldOA.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.lh.GoldOA.entity.AccountTable;
 
 /**
  * 主控制器
@@ -15,8 +18,8 @@ public class SystemController {
 	 * 主页登陆
 	 * @return
 	 */
-	@RequestMapping(value={"/index","/"},method=RequestMethod.GET)
-	public String index(){
+	@RequestMapping(value={"/index","/","index.{anything}"},method=RequestMethod.GET)
+	public String index(@ModelAttribute AccountTable accountTable ){
 		return "index";
 	}
 

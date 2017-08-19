@@ -29,7 +29,9 @@ public class SystemDaoImpl implements SystemDao{
 	 */
 	@SuppressWarnings("null")
 	@Override
-	public AccountTable selectAccount(String account, String password) {
+	public AccountTable selectAccount(AccountTable accountTable) {
+		String account = accountTable.getAccount();
+		String password = accountTable.getPassword();
 		String sql="select * from accountTable where account = ? and password = ?";
 		List<AccountTable> list = jdbc.query(sql,new AccountTableRowMapper() ,account,password);
 		if (list == null) {
