@@ -12,6 +12,6 @@ public interface SystemService {
 	 * @param password 密码
 	 * @return 该用户的账号
 	 */
-	public AccountTable login(String account,String password);
+	public AccountTable login(AccountTable accountTable);
 	
 }
