@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.lh.GoldOA.dao.SystemDao;
 import com.lh.GoldOA.entity.AccountTable;
+import com.lh.GoldOA.entity.Sell;
 import com.lh.GoldOA.service.SystemService;
 
 @Service
@@ -62,5 +63,16 @@ public class SystemServiceImpl implements SystemService {
 	
 	
 	
+
+
+	/**
+	 * 方法未完成，类型转换问题待处理
+	 */
+	@Override
+	public boolean sell(Sell sell) {
+		
+		 dao.insertSell(sell);
+		return false;
+	}
 
 }
