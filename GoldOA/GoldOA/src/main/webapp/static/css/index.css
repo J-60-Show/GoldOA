@@ -1,0 +1,21 @@
+body{
+	background: #FFFFCC;
+}
+em{
+	
+}
+.login{
+	width: 20em;
+	height: 25em;
+	border: 5px solid #336666;
+	float: right;
+	margin: 5em 10em;
+}
+.formHead{
+	width: 100%;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 1.5em;
+	color: #336666;
+	font-weight: bolder;
+}

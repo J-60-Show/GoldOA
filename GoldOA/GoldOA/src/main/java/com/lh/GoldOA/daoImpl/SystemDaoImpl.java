@@ -30,10 +30,9 @@ public class SystemDaoImpl implements SystemDao{
 	@SuppressWarnings("null")
 	@Override
 	public AccountTable selectAccount(AccountTable accountTable) {
-		String account = accountTable.getAccount();
-		String password = accountTable.getPassword();
-		String sql="select * from accountTable where account = ? and password = ?";
-		List<AccountTable> list = jdbc.query(sql,new AccountTableRowMapper() ,account,password);
+		String account = accountTable.getAccount(); 
+		String sql="select * from accountTable where account = ?";
+		List<AccountTable> list = jdbc.query(sql,new AccountTableRowMapper() ,account);
 		if (list == null) {
 			return list.get(0);
 		}

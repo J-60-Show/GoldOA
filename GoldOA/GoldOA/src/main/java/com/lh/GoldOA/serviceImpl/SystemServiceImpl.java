@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 import com.lh.GoldOA.dao.SystemDao;
 import com.lh.GoldOA.entity.AccountTable;
 import com.lh.GoldOA.service.SystemService;
+
 @Service
 public class SystemServiceImpl implements SystemService {
-	
-	@SuppressWarnings("unused")
+	 
 	private SystemDao dao;
 	
 	@Autowired
@@ -35,10 +35,32 @@ public class SystemServiceImpl implements SystemService {
 		//需要一个正则表达式先检查内容   
 		
 		//检查就可以了
+		AccountTable accountTableOfSelect = dao.selectAccount(accountTable);
+		if (accountTableOfSelect!=null && accountTableOfSelect.equals(password)) {
+			return accountTableOfSelect;
+		}
+		return null;
+	}
+
+
+	/**
+	 * 
+	 * 每个页面的Session检查
+	 * @param account 账号
+	 * @return 返回AccountTable.若不存在则返回NULL
+	 * 可以考虑通过MD5转码 或者SHA转码保存session
+	 */
+	@Override
+	public AccountTable chlickSession(String account) {
+		AccountTable accountTable  = new AccountTable();
+		accountTable.setAccount(account);
 		accountTable = dao.selectAccount(accountTable);
 		
 		
 		return accountTable;
 	}
+	
+	
+	
 
 }
