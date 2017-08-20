@@ -34,7 +34,7 @@ public class SomeMethodPostController {
 	 * 登陆的POST请求
 	 * @param accountTable 账户类型
 	 * @return 若登陆成功返回主页面,若登陆失败则返回响应的错误信息
-	 * 未实现spring的Error在页面显示--忘了怎么玩的了
+	 * 未实现spring的Error在页面显示--忘了怎么玩的了(--你还是好耍)
 	 */
 	@RequestMapping(value={"/index","/","index.{anything}"},method=RequestMethod.POST)
 	public String index(AccountTable accountTable){

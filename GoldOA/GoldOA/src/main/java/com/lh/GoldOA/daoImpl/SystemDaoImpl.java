@@ -7,7 +7,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import com.lh.GoldOA.dao.SystemDao;
-import com.lh.GoldOA.entity.AccountTable; 
+import com.lh.GoldOA.entity.AccountTable;
+import com.lh.GoldOA.entity.Sell;
 import com.lh.GoldOA.rowmapper.AccountTableRowMapper;
 
 /**
@@ -38,6 +39,19 @@ public class SystemDaoImpl implements SystemDao{
 			return list.get(0);
 		}
 		return null;
+	}
+
+
+	/**
+	 * 增加销售单方法，返回受影响的行数
+	 */
+	@Override
+	public int insertSell(Sell sell) {
+		
+		String sql = "insert into sell value(default,?,?,?,?,?)";
+		
+		return jdbc.update(sql,sell.getEmployeeId(),sell.getSellComId(),
+					sell.getClass(),sell.getOrderTime(),sell.getSellTime());
 	}
 
 	
