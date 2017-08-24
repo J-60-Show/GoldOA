@@ -1,4 +1,7 @@
 package com.lh.GoldOA.entity;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 /**
  * 账号--持久化类
  * @author NashobaBrook
@@ -6,10 +9,18 @@ package com.lh.GoldOA.entity;
  *
  */
 public class AccountTable {
-	   private Integer id;//编号
-	   private String  account;//账号
-	   private String 	password;//密码
-	   private int power;//权限
+	   
+	private Integer id;//编号
+	
+	private String  account;//账号
+	
+	@NotEmpty(message="密码不能为空")
+	private String 	password;//密码
+	
+	private int power;//权限
+	   
+	   
+	   
 	public Integer getId() {
 		return id;
 	}

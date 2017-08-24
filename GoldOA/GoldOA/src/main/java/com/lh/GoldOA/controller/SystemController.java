@@ -32,7 +32,13 @@ public class SystemController {
 	 * @return
 	 */
 	@RequestMapping(value={"/index","/","index.{anything}"},method=RequestMethod.GET)
-	public String index(@ModelAttribute AccountTable accountTable ){
+	public String index(@ModelAttribute AccountTable accountTable,HttpSession session ){
+		//若已经登陆好了,那么就不再让输入密码,直接登陆
+		String account = (String) session.getAttribute("account");
+		if (account != null && service.chlickSession(account) != null) {
+			return "redirect:/function.html";
+		}
+		
 		return "index";
 	}
 
@@ -41,7 +47,7 @@ public class SystemController {
 	 * 验证是否有session
 	 * @return
 	 */
-	@RequestMapping(value={"/function","/function.html","/function.{anything}"},method=RequestMethod.GET)
+	@RequestMapping(value={"/function","/function.{anything}"},method=RequestMethod.GET)
 	public String function(HttpSession session,Model model){
 		
 		String account = (String) session.getAttribute("account");
@@ -58,10 +64,24 @@ public class SystemController {
 	 * staffmanagement页面
 	 * @return
 	 */
-	@RequestMapping(value={"/staffmanagement"},method=RequestMethod.GET)
-	public String staffmanagement(){
-		return "staffmanagement";
+	@RequestMapping(value={"/staffmanagement","/staffmanagement.{anything}"},method=RequestMethod.GET)
+	public String staffmanagement(HttpSession session){
+		
+		int power ;
+		try {
+			power = (int) session.getAttribute("power");
+		} catch (Exception e) {
+			//差一个添加日志记录
+			return "redirect:/";
+		}
+		 
+		if (power>2) { 
+			//差一个添加日志记录并且记录是谁
+			return "staffmanagement";
+		}
+		return "redirect:/";
+
 	}
-	
+		
 	
 }

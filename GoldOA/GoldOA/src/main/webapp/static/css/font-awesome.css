@@ -21,14 +21,9 @@
     Work: http://lemonwi.se co-founder
 
     */
-	/* 代码整理：懒人之家 lanrenzhijia.com */
+	/* 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷之锟斤拷 lanrenzhijia.com */
 @font-face {
-  font-family: "FontAwesome";
-  src: url('../font/fontawesome-webfont.eot');
-  src: url('../font/fontawesome-webfont.eot?#iefix') format('eot'), 
-  url('../font/fontawesome-webfont.woff') format('woff'), 
-  url('../font/fontawesome-webfont.ttf') format('truetype'), 
-  url('../font/fontawesome-webfont.svg#FontAwesome') format('svg');
+  font-family: "FontAwesome"; 
   font-weight: normal;
   font-style: normal;
 }
@@ -305,4 +300,4 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 .icon-paste:before                { content: "\f0ea"; }
 
 .icon-user-md:before              { content: "\f200"; }
-/* 代码整理：懒人之家 lanrenzhijia.com */
+ 

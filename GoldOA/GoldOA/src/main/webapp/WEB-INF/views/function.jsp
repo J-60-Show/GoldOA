@@ -52,27 +52,29 @@
 		</style>
 	</head>
 	<body>
-		<div class="nav">
-			 
+		<div class="nav"> 
+			<span style="float: right;">${sessionScope.account}
+			<a href="${pageContext.request.contextPath }/out">注销</a>
+			</span> 
 		</div>
 		<div class="icons">
 		
-			<div class="icon "><a href="${pageContext.request.contextPath }/sell">销售录入</a></div>
+			<div class="icon "><a href="${pageContext.request.contextPath }/sell.html">销售录入</a></div>
+				
 			<c:choose>
 				<c:when test="${accountTable.power==1 }">
-				
-					<div class="icon "><a href="${pageContext.request.contextPath }/results">业绩报表</a></div>
-					<div class="icon "><a href="${pageContext.request.contextPath }/salary">工资报表</a></div>
+					<div class="icon "><a href="${pageContext.request.contextPath }/results.html">业绩报表</a></div>
+					<div class="icon "><a href="${pageContext.request.contextPath }/salary.html">工资报表</a></div>
 				</c:when>
 				<c:when test="${accountTable.power==2 }">
-					<div class="icon "><a href="${pageContext.request.contextPath }/goods">商品管理</a></div>
-					<div class="icon "><a href="${pageContext.request.contextPath }/staffmanagement">账号管理</a></div>
-					<div class="icon "><a href="${pageContext.request.contextPath }/other">其他</a></div>
+					<div class="icon "><a href="${pageContext.request.contextPath }/results.html">业绩报表</a></div>
+					<div class="icon "><a href="${pageContext.request.contextPath }/salary.html">工资报表</a></div>
+					<div class="icon "><a href="${pageContext.request.contextPath }/goods.html">商品管理</a></div>
+					<div class="icon "><a href="${pageContext.request.contextPath }/staffmanagement.html">账号管理</a></div>
+					<div class="icon "><a href="${pageContext.request.contextPath }/other.html">其他</a></div>
 				</c:when>
-				<c:otherwise > 
+				<c:otherwise > 	
 				</c:otherwise>
-				
-					
 			</c:choose> 
 		</div>
 		<div class="food">
@@ -80,3 +82,4 @@
 		</div>
 	</body>
 </html>
+

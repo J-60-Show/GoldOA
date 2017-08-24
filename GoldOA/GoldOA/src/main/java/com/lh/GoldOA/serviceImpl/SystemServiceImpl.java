@@ -3,6 +3,7 @@ package com.lh.GoldOA.serviceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.lh.GoldOA.common.MdFive;
 import com.lh.GoldOA.dao.SystemDao;
 import com.lh.GoldOA.entity.AccountTable;
 import com.lh.GoldOA.entity.Sell;
@@ -37,7 +38,8 @@ public class SystemServiceImpl implements SystemService {
 		
 		//检查就可以了
 		AccountTable accountTableOfSelect = dao.selectAccount(accountTable);
-		if (accountTableOfSelect!=null && accountTableOfSelect.equals(password)) {
+		 
+		if (accountTableOfSelect!=null && accountTableOfSelect.getPassword().equals(MdFive.MD5(password.getBytes()))) {
 			return accountTableOfSelect;
 		}
 		return null;

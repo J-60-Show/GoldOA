@@ -29,6 +29,13 @@ public class SomeMethodPostController {
 		this.serivce = serivce;
 	}
 
+	@RequestMapping(value="/out",method=RequestMethod.GET)
+	public String cleanSession(HttpSession session){
+		session.removeAttribute("account");
+		session.removeAttribute("power");
+		return "redirect:/";
+	}
+	
 
 
 	/**
@@ -39,14 +46,18 @@ public class SomeMethodPostController {
 	 */
 	@RequestMapping(value={"/index","/","index.{anything}"},method=RequestMethod.POST)
 	public String index(AccountTable accountTable,HttpSession session){
-	 
+	
+		//进行登陆
 		accountTable = serivce.login(accountTable);
 		if (accountTable == null) {
 			return "index";
-		}
+		} 
+		
 		//保存session
 		session.setAttribute("account", accountTable.getAccount());
+		session.setAttribute("power", accountTable.getPower());
+		
 		//到function页面
-		return "/function";
+		return "redirect:/function.html";
 	}
 }
