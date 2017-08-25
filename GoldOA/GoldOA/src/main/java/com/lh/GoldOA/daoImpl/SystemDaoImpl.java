@@ -3,7 +3,8 @@ package com.lh.GoldOA.daoImpl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate; 
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.lh.GoldOA.dao.SystemDao;
@@ -18,6 +19,7 @@ import com.lh.GoldOA.rowmapper.AccountTableRowMapper;
  *
  */
 @Service
+@Repository
 public class SystemDaoImpl implements SystemDao{
 
 	@Autowired
