@@ -1,5 +1,7 @@
 package com.lh.GoldOA.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +21,6 @@ public class SomeMethodPostController {
 	/**
 	 * 处理的方法
 	 */
-	@SuppressWarnings("unused")
 	private SystemService serivce;
 	
 	
@@ -28,6 +29,13 @@ public class SomeMethodPostController {
 		this.serivce = serivce;
 	}
 
+	@RequestMapping(value="/out",method=RequestMethod.GET)
+	public String cleanSession(HttpSession session){
+		session.removeAttribute("account");
+		session.removeAttribute("power");
+		return "redirect:/";
+	}
+	
 
 
 	/**
@@ -37,13 +45,19 @@ public class SomeMethodPostController {
 	 * 未实现spring的Error在页面显示--忘了怎么玩的了(--你还是好耍)
 	 */
 	@RequestMapping(value={"/index","/","index.{anything}"},method=RequestMethod.POST)
-	public String index(AccountTable accountTable){
-	 
+	public String index(AccountTable accountTable,HttpSession session){
+	
+		//进行登陆
 		accountTable = serivce.login(accountTable);
 		if (accountTable == null) {
 			return "index";
-		}
+		} 
 		
-		return "/function";
+		//保存session
+		session.setAttribute("account", accountTable.getAccount());
+		session.setAttribute("power", accountTable.getPower());
+		
+		//到function页面
+		return "redirect:/function.html";
 	}
 }

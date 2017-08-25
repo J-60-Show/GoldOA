@@ -29,15 +29,13 @@ public class SystemDaoImpl implements SystemDao{
 	/**
 	 * 查找该账号密码对应的
 	 * @return 返回查找到的用户:若未查询到就返回null;
-	 */
-	@SuppressWarnings("null")
+	 */ 
 	@Override
 	public AccountTable selectAccount(AccountTable accountTable) {
-		String account = accountTable.getAccount();
-		String password = accountTable.getPassword();
-		String sql="select * from accountTable where account = ? and password = ?";
-		List<AccountTable> list = jdbc.query(sql,new AccountTableRowMapper() ,account,password);
-		if (list == null) {
+		String account = accountTable.getAccount(); 
+		String sql="select * from accountTable where account = ?";
+		List<AccountTable> list = jdbc.query(sql,new AccountTableRowMapper() ,account);
+		if (list.size() > 0) {
 			return list.get(0);
 		}
 		return null;
