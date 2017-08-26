@@ -32,11 +32,11 @@
 				<form class="form-1" method="post" autocomplete="off">
 					<p class="field">
 						<input type="text" name="account" maxlength="20" placeholder="请输入账号">
-						<i class="">^^</i>
+						<i class="">账号</i>
 					</p>
 					<p class="field">
 						<input type="password" name="password" maxlength="20" placeholder="请输入密码">
-						<i class="">**</i>
+						<i class="">密码</i>
 					</p>
 					<p class="submit">
 						<button type="submit" name="submit">

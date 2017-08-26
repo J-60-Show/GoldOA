@@ -1,7 +1,10 @@
 package com.lh.GoldOA.dao;
   
 
+import java.util.List;
+
 import com.lh.GoldOA.entity.AccountTable;
+import com.lh.GoldOA.entity.Employee;
 import com.lh.GoldOA.entity.Sell;  
 
 /** 
@@ -22,6 +25,13 @@ public interface SystemDao {
 	 * @return 返回受影响的行数
 	 */
 	int insertSell (Sell sell);
+	
+	
+	/**
+	 * 查询当班所有员工
+	 * @return 员工集合
+	 */
+	List<Employee> SecletEmployee();
 	 
 	
 }

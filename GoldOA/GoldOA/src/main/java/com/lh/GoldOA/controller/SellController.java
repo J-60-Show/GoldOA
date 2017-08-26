@@ -22,7 +22,9 @@ public class SellController {
 	SystemService systemService;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String sellIndex(ModelMap map){
+	public String sellIndex(ModelMap map ){
+		
+		
 		map.put("sell", new Sell());
 		return "sell";
 	}
@@ -38,4 +40,5 @@ public class SellController {
 		
 		return "sell";
 	}
+	
 }
