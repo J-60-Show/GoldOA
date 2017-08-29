@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.lh.GoldOA.entity.Employee;
+import com.lh.GoldOA.domain.Employee;
 
 public class EmployeeRowMapper implements RowMapper<Employee>{
 

@@ -1,4 +1,4 @@
-package com.lh.GoldOA.entity;
+package com.lh.GoldOA.domain;
 /**
  * 商品表--持久化类
  * @author NashobaBrook

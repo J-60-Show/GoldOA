@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 
 import com.lh.GoldOA.common.MdFive;
 import com.lh.GoldOA.dao.SystemDao;
-import com.lh.GoldOA.entity.AccountTable;
-import com.lh.GoldOA.entity.Sell;
+import com.lh.GoldOA.domain.AccountTable;
+import com.lh.GoldOA.domain.Sell;
 import com.lh.GoldOA.service.SystemService;
 
 @Service

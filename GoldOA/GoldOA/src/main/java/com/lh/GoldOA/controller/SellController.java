@@ -6,7 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.lh.GoldOA.entity.Sell;
+import com.lh.GoldOA.domain.Sell;
 import com.lh.GoldOA.service.SystemService;
 
 /**

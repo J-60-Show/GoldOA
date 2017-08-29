@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.lh.GoldOA.entity.Log;
+import com.lh.GoldOA.domain.Log;
 
 public class LogRowMapper implements RowMapper<Log>{
 

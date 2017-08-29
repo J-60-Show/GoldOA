@@ -7,6 +7,4 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/indent")
 public class Indent {
 	
-	public String 
-
 }

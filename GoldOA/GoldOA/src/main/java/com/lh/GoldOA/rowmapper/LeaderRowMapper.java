@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.lh.GoldOA.entity.Leader;
+import com.lh.GoldOA.domain.Leader;
 
 public class LeaderRowMapper implements RowMapper<Leader>{
 

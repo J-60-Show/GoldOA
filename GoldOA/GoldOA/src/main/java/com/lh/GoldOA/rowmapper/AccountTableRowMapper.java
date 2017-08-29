@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.lh.GoldOA.entity.AccountTable;
+import com.lh.GoldOA.domain.AccountTable;
 
 public class AccountTableRowMapper implements RowMapper<AccountTable>{
 
