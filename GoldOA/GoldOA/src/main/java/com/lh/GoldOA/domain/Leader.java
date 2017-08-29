@@ -1,10 +1,16 @@
 package com.lh.GoldOA.domain;
 
+import java.io.Serializable;
+
 /**
  * 组长类
  */
-public class Leader {
+public class Leader implements Serializable{
 
+		/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7060544365961963248L;
 		/**
 		 * 班组组次 
 		 * 0：A组，

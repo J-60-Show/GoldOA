@@ -1,5 +1,7 @@
 package com.lh.GoldOA.domain;
 
+import java.io.Serializable;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
@@ -8,8 +10,13 @@ import org.hibernate.validator.constraints.NotEmpty;
  * @date 2017年8月18日15:45:34
  *
  */
-public class AccountTable {
+public class AccountTable implements Serializable{
 	   
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5935690988275722191L;
+
 	private Integer id;//编号
 	
 	private String  account;//账号

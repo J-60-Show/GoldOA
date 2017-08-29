@@ -1,13 +1,18 @@
 package com.lh.GoldOA.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 日志类
  */
-public class Log {
+public class Log implements Serializable{
 	   
-	   private String account;//账号
+	   /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4615631173434957553L;
+	private String account;//账号
 	   private Date time;//操作时间
 	   private String work;//操作内容
 	   private Integer state;// 0：正常，1：异常

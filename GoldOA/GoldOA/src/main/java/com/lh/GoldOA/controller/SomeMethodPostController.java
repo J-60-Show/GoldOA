@@ -60,4 +60,8 @@ public class SomeMethodPostController {
 		//到function页面
 		return "redirect:/function.html";
 	}
+	
+	
+	
+	
 }
