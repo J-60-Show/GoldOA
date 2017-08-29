@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.lh.GoldOA.dao.SystemDao;
 import com.lh.GoldOA.entity.AccountTable;
+import com.lh.GoldOA.entity.Employee;
 import com.lh.GoldOA.entity.Sell;
 import com.lh.GoldOA.rowmapper.AccountTableRowMapper;
 
@@ -52,6 +53,13 @@ public class SystemDaoImpl implements SystemDao{
 		
 		return jdbc.update(sql,sell.getEmployeeId(),sell.getSellComId(),
 					sell.getClass(),sell.getOrderTime(),sell.getSellTime());
+	}
+
+
+	@Override
+	public List<Employee> SecletEmployee() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	
