@@ -1,13 +1,20 @@
 package com.lh.GoldOA.entity;
+
+import java.io.Serializable;
+
 /**
  * 商品表--持久化类
  * @author NashobaBrook
  * @date 2017年8月18日15:48:11
  *
  */
-public class Commodity {
+public class Commodity implements Serializable{
 	   
-	   private Integer id;//商品编号
+	   /**
+	 * 
+	 */
+	private static final long serialVersionUID = -658419152138972929L;
+	private Integer id;//商品编号
 	   private String comName;//商品名称
 	   private Double points;//提成点
 	   private Integer sort;//大分类 

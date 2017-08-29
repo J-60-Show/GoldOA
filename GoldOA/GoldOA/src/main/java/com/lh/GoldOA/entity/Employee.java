@@ -1,14 +1,19 @@
 package com.lh.GoldOA.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 /**
  * 员工表--持久化类
  * @author NashobaBrook
  * @date 2017年8月18日15:42:47
  */
-public class Employee {
+public class Employee implements Serializable{
 
       
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8769542890049525558L;
 	private Integer id;//编号
 	private String name;//姓名
 	private String phone;//电话

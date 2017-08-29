@@ -1,12 +1,17 @@
 package com.lh.GoldOA.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 销售类
  */
-public class Sell {
+public class Sell implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1269130101031805550L;
 	private Integer employeeId;// 编号
 	private Integer id;// 销售表编号
 	private Integer sellComId;// 商品种类编号
