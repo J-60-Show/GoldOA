@@ -68,9 +68,10 @@
 				</c:when>
 				<c:when test="${accountTable.power==2 }">
 					<div class="icon "><a href="${pageContext.request.contextPath }/results.html">业绩报表</a></div>
-					<div class="icon "><a href="${pageContext.request.contextPath }/salary.html">工资报表</a></div>
+					<div class="icon "><a href="${pageContext.request.contextPath }/salary.html">工资报表</a></div>			
+					<div class="icon "><a href="${pageContext.request.contextPath }/staffmanagement.html">订单管理</a></div>
 					<div class="icon "><a href="${pageContext.request.contextPath }/goods.html">商品管理</a></div>
-					<div class="icon "><a href="${pageContext.request.contextPath }/staffmanagement.html">账号管理</a></div>
+					<div class="icon "><a href="${pageContext.request.contextPath }/staffmanagement.html">账号管理</a></div>	
 					<div class="icon "><a href="${pageContext.request.contextPath }/other.html">其他</a></div>
 				</c:when>
 				<c:otherwise > 	
