@@ -1,4 +1,4 @@
-package com.lh.GoldOA.dao;
+package com.lh.GoldOA.mapper;
   
 
 import java.util.List;
@@ -10,13 +10,14 @@ import com.lh.GoldOA.domain.Sell;
 /** 
  *主要的dao层接口
  */
-public interface SystemDao { 
+
+public interface SystemMapper { 
 	
 	/**
 	 * 查找该账号对应的
 	 * @return 返回值为AccountTable.返回查找到的用户:若未查询到就返回null;
 	 */
-	public  AccountTable selectAccount(AccountTable accountTable);
+	AccountTable selectAccount(AccountTable accountTable);
 	
 	
 	/**
