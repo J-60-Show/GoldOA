@@ -24,80 +24,139 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>formSpring Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	<!-- 配置jar版本 -->
+	<properties>
+		<!-- 配置tomcat版本 -->
+		<tomcat.version>7.0.73</tomcat.version>
+		<!-- 配置mysql版本 -->
+		<mysql.version>5.1.40</mysql.version>
+		<!-- 配置Spring版本 -->
+		<spring.version>4.3.2.RELEASE</spring.version>	
+		<!-- 配置springJSON版本 -->
+		<jackson.version>2.8.1</jackson.version>
+		<!-- 配置mybatis版本 -->
+		<mybatis.version>3.4.1</mybatis.version>
+	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-
-		<!-- 添加 JSP、EL、servlet 架包 -->
+		<!-- 配置Tomcat的jar -->
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jsp-api</artifactId>
-			<version>7.0.73</version>
+			<version>${tomcat.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- 配置JSTL -->
+		<!-- 配置JSTL的jar -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
-			<scope>compile</scope>
 		</dependency>
 
-		<!-- 添加mysql 架包 -->
+		<!-- 配置mysql的jar -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.40</version>
+			<version>${mysql.version}</version>
 		</dependency>
 
-		<!-- 添加SpringMVC 架包 -->
+		<!-- 配置commons组件的jar -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<!-- 配置spring框架所需的jar -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>4.3.2.RELEASE</version>
-			<scope>compile</scope>
+			<version>${spring.version}</version>
 		</dependency>
-
-		<!-- 添加Spring JDBC架包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>4.3.2.RELEASE</version>
-			<scope>compile</scope>
+			<version>${spring.version}</version>
 		</dependency>
-
-		<!-- 添加Spring Json对象架包 -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-			<version>2.8.1</version>
-			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>2.8.1</version>
-			<scope>compile</scope>
-		</dependency>
-
+		
+		<!-- 配置SpringMVC使用JSON的jar -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.8.1</version>
-			<scope>compile</scope>
+			<version>${jackson.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		
+		
+		<!-- 配置mybatis的jar -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		
+		<!-- 配置Spring整合Mybatis所需的jar -->		
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+
 		<!-- 配置hibernate验证器架包 -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<version>4.3.2.Final</version>
 			<scope>compile</scope>
+		</dependency>
+		<!-- aop面向切面编程架包 -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.9</version>
 		</dependency>
 
 	</dependencies>

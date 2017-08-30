@@ -1,4 +1,4 @@
-package com.lh.GoldOA.entity;
+package com.lh.GoldOA.domain;
 
 import java.io.Serializable;
 

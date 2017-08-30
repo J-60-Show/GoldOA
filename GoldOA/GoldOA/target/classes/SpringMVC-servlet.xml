@@ -16,7 +16,7 @@
 		
 		<mvc:resources location="/static/" mapping="/static/**"></mvc:resources>
 				
-		<context:component-scan base-package="com.lh.GoldOA"></context:component-scan>
+		<context:component-scan base-package="com.lh.GoldOA.controller"></context:component-scan>
 		
 		<mvc:annotation-driven></mvc:annotation-driven>
 </beans>
