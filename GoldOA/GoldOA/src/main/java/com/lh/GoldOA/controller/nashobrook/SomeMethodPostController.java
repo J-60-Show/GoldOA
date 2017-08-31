@@ -1,4 +1,4 @@
-package com.lh.GoldOA.controller;
+package com.lh.GoldOA.controller.nashobrook;
 
 import javax.servlet.http.HttpSession;
 
