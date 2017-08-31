@@ -1,4 +1,4 @@
-package com.lh.GoldOA.domain;
+package com.lh.GoldOA.domain.goods;
 
 import java.io.Serializable;
 import java.util.Date;

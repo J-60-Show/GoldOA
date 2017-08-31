@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.lh.GoldOA.domain.AccountTable;
+import com.lh.GoldOA.domain.em.AccountTable;
 import com.lh.GoldOA.service.SystemService;
 /**
  * 对于staffmanagement页面的所有请求进行后台操作

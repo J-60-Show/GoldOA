@@ -1,4 +1,4 @@
-package com.lh.GoldOA.domain;
+package com.lh.GoldOA.domain.goods;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * 销售类
  */
-public class Sell implements Serializable{
+public class Sell implements Serializable {
 
 	/**
 	 * 
@@ -18,11 +18,7 @@ public class Sell implements Serializable{
 	private Integer classes;// 班组 0：A组，1：B组
 	private Date orderTime;// 订单时间
 	private Date sellTime;// 销售时间
-	
-	
-	
-	
-	
+
 	public Sell(Integer employeeId, Integer id, Integer sellComId, Integer classes, Date orderTime, Date sellTime) {
 		super();
 		this.employeeId = employeeId;
@@ -32,16 +28,10 @@ public class Sell implements Serializable{
 		this.orderTime = orderTime;
 		this.sellTime = sellTime;
 	}
-	
-	
-	
+
 	public Sell() {
 		super();
 	}
-	
-	
-
-
 
 	@Override
 	public String toString() {
@@ -49,45 +39,52 @@ public class Sell implements Serializable{
 				+ ", orderTime=" + orderTime + ", sellTime=" + sellTime + "]";
 	}
 
-
-
 	public Integer getEmployeeId() {
 		return employeeId;
 	}
+
 	public void setEmployeeId(Integer employeeId) {
 		this.employeeId = employeeId;
 	}
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public Integer getSellComId() {
 		return sellComId;
 	}
+
 	public void setSellComId(Integer sellComId) {
 		this.sellComId = sellComId;
 	}
+
 	public Integer getClasses() {
 		return classes;
 	}
+
 	public void setClasses(Integer classes) {
 		this.classes = classes;
 	}
+
 	public Date getOrderTime() {
 		return orderTime;
 	}
+
 	public void setOrderTime(Date orderTime) {
 		this.orderTime = orderTime;
 	}
+
 	public Date getSellTime() {
 		return sellTime;
 	}
+
 	public void setSellTime(Date sellTime) {
 		this.sellTime = sellTime;
 	}
-	
-	
-	
+
 }

@@ -3,9 +3,9 @@ package com.lh.GoldOA.mapper;
 
 import java.util.List;
 
-import com.lh.GoldOA.domain.AccountTable;
-import com.lh.GoldOA.domain.Employee;
-import com.lh.GoldOA.domain.Sell;  
+import com.lh.GoldOA.domain.em.AccountTable;
+import com.lh.GoldOA.domain.em.Employee;
+import com.lh.GoldOA.domain.goods.Sell;  
 
 /** 
  *主要的dao层接口

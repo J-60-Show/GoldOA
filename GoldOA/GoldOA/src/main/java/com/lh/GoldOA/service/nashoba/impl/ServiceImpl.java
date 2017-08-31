@@ -6,8 +6,8 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.lh.GoldOA.domain.AccountTable;
-import com.lh.GoldOA.domain.Employee;
+import com.lh.GoldOA.domain.em.AccountTable;
+import com.lh.GoldOA.domain.em.Employee;
 import com.lh.GoldOA.mapper.nashoba.Mapper;
 import com.lh.GoldOA.service.nashoba.Service;
 /**
