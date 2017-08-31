@@ -15,7 +15,7 @@ public class Log implements Serializable {
 	private String account;// 账号
 	private Date time;// 操作时间
 	private String work;// 操作内容
-	private Integer state;// 0：正常，1：异常
+	private Integer state;// 0：正常，1：异常 
 
 	@Override
 	public String toString() {

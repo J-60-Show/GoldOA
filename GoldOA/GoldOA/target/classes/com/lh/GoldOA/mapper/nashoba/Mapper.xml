@@ -7,5 +7,17 @@
      <insert id="insertIntoAccountTable">
          
      </insert>
-    
+   	 <select id="selectByPage">
+        
+        
+   	 </select>
+   	 <select id="selectAccount">
+        
+        
+   	 </select>
+   	 <select id="selectById">
+        
+        
+   	 </select>
+     
 </mapper>
