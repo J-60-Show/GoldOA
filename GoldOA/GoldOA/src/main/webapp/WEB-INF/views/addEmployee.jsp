@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>增加商品</title>
-<style type="text/css">
+<title>增加员工</title>
+	<style type="text/css">
 		body {
 		text-align: center;
 	}
@@ -20,18 +20,29 @@
 	<div class="container">
 		<form:form method="post" commandName="employee">
 			<div>
-			<label>商品名称：</label>
-			<form:input path="comName"/>
+			<label>员工姓名：</label>
+			<form:input path="name"/>
 			</div>
 			<div>
-			<label>提成点：</label>
-			<form:input path="points"/>
+			<label>员工姓名：</label>
+			<form:input path="name"/>
 			</div>
 			<div>
-			<label>大分类：</label>
-			<form:input path="sort"/>
+			<label>员工姓名：</label>
+			<form:input path="name"/>
 			</div>
-			<form:button>提交</form:button>
+			<div>
+			<label>员工姓名：</label>
+			<form:input path="name"/>
+			</div>
+			<div>
+			<label>员工姓名：</label>
+			<form:input path="name"/>
+			</div>
+			<div>
+			<label>员工姓名：</label>
+			<form:input path="name"/>
+			</div>
 		</form:form>
 	</div>
 </body>
