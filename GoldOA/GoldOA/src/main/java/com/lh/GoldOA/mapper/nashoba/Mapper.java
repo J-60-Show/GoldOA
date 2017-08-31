@@ -1,7 +1,7 @@
 package com.lh.GoldOA.mapper.nashoba;
 
-import com.lh.GoldOA.domain.AccountTable;
-import com.lh.GoldOA.domain.Employee;
+import com.lh.GoldOA.domain.em.AccountTable;
+import com.lh.GoldOA.domain.em.Employee;
 
 public interface Mapper {
 	/**添加员工信息*/

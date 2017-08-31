@@ -1,8 +1,8 @@
 package com.lh.GoldOA.service;
 
 
-import com.lh.GoldOA.domain.AccountTable;
-import com.lh.GoldOA.domain.Sell;
+import com.lh.GoldOA.domain.em.AccountTable;
+import com.lh.GoldOA.domain.goods.Sell;
 
 
 

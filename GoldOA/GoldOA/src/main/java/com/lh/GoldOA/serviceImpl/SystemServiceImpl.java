@@ -4,8 +4,8 @@ package com.lh.GoldOA.serviceImpl;
 import org.springframework.stereotype.Service;
 
 import com.lh.GoldOA.common.MdFive;
-import com.lh.GoldOA.domain.AccountTable;
-import com.lh.GoldOA.domain.Sell;
+import com.lh.GoldOA.domain.em.AccountTable;
+import com.lh.GoldOA.domain.goods.Sell;
 import com.lh.GoldOA.mapper.SystemMapper;
 import com.lh.GoldOA.service.SystemService;
 
