@@ -22,6 +22,7 @@ public class Employee implements Serializable{
 	private String folkName;//亲属姓名
 	private String folkPhone;//亲属电话
 	private Date getDay;//到岗日期
+	private Integer eRank;//员工等级(0：超级管理员，1：店长，2：组长，3：导购)
 	
 	public Integer getId() {
 		return id;
@@ -70,6 +71,13 @@ public class Employee implements Serializable{
 	}
 	public void setGetDay(Date getDay) {
 		this.getDay = getDay;
+	}
+	
+	public Integer geteRank() {
+		return eRank;
+	}
+	public void seteRank(Integer eRank) {
+		this.eRank = eRank;
 	}
 	public Employee() {
 		super();

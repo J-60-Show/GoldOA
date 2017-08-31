@@ -1,4 +1,4 @@
-package com.lh.GoldOA.controller;
+package com.lh.GoldOA.controller.cor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
