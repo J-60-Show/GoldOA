@@ -1,5 +1,6 @@
 package com.lh.GoldOA.service.nashoba.impl;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,6 +27,12 @@ public class ServiceImpl implements Service{
 	@Override
 	public Map<String, Object> addAccount(Employee employee,AccountTable accountTable) {
 		Map<String,Object> map = new HashMap<>();
+		//若时间未设置就设置为当前时间
+		if (employee.getGetDay() == null) {
+			//设置时间为当前时间
+			employee.setGetDay(new Date());
+		}
+		
 		if (accountTable == null) {
 			map.put("success", false);
 			map.put("msg", "请填写权限!");
@@ -40,7 +47,8 @@ public class ServiceImpl implements Service{
 			map.put("msg", "请填写姓名!");
 			return map;
 		}
-		
+
+	
 		if (employee.getPhone().trim().equals("")||employee.getPhone() == null) {
 			map.put("success", false);
 			map.put("msg", employee.getName()+"未填写手机号,该项必填!");
